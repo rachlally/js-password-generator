@@ -11,7 +11,7 @@ var numberOptions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacter = ["!", "@", "#", "$", "%", "&", "*"];
 
 //Based on the responses build available pool of characters
-//var criteriaArray = "0";
+//var criteriaArray = "";
 
 // Write password to the #password input
 function writePassword() {
@@ -22,7 +22,7 @@ function writePassword() {
 
 }
 
-//Build a random, secure password
+//Build a random, secure password 
 function generatePassword() {
   alert("Select your password criteria");
 
@@ -31,10 +31,9 @@ function generatePassword() {
   var desiredLength = prompt("Desired length between 8-128 characters:");
    if (desiredLength < 8 || desiredLength > 128) {
     alert("Invalid length");
-    generatePassword(); 
+    return; 
     } else {
   
- 
   //prompt user for other desired criteria
   //store responses in single variable
   var lowerCase = confirm("Include lowercase?");
@@ -57,20 +56,20 @@ function generatePassword() {
   //build password character by character with a for loop
   //generate random int w/in range of available characters
   //do until length = desiredLength
-  for (var i = 8; i >129; i++) { 
-    Math.floor(Math.random() * desiredLength);
-}
+  //for (var i = 8; i >129; i++) { 
+   //Math.floor(Math.random() * desiredLength);
+  //}
 
-  //generate random int within range of available chars length
+ // for (i > 0, i == criteriaArray[0], i++); {
+   //   Math.floor(Math.random)
+  //}
+
+
   //add char to result
   //do until length = passwordLength
-
-  //function password = 
-
   return result
 }}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
 
