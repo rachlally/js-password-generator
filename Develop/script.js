@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 //global variables
-var result = []
+//var result = []
 
 //Create arrays of uppercase, lowercase, numbers, and special characters
 var lowerAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -11,7 +11,7 @@ var numberOptions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacter = ["!", "@", "#", "$", "%", "&", "*"];
 
 //Based on the responses build available pool of characters
-var criteriaArray = [""];
+//var criteriaArray = "0";
 
 // Write password to the #password input
 function writePassword() {
@@ -29,11 +29,10 @@ function generatePassword() {
   //prompt user for length
   //check length is between 8-128 characters by checking for invalid lengths
   var desiredLength = prompt("Desired length between 8-128 characters:");
-    if (desiredLength < 8 || desiredLength > 128) {
-      alert("Invalid length");
-      generatePassword() 
-     // return;
-    }
+   if (desiredLength < 8 || desiredLength > 128) {
+    alert("Invalid length");
+    generatePassword(); 
+    } else {
   
  
   //prompt user for other desired criteria
@@ -55,8 +54,12 @@ function generatePassword() {
     var criteriaArray = criteriaArray.concat(specialCharacter);
   } 
 
-  //build password character by character
-// for loop
+  //build password character by character with a for loop
+  //generate random int w/in range of available characters
+  //do until length = desiredLength
+  for (var i = 8; i >129; i++) { 
+    Math.floor(Math.random() * desiredLength);
+}
 
   //generate random int within range of available chars length
   //add char to result
@@ -65,7 +68,7 @@ function generatePassword() {
   //function password = 
 
   return result
-}
+}}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
