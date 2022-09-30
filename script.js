@@ -38,19 +38,19 @@ function generatePassword() {
   //store responses in single variable
   var lowerCase = confirm("Include lowercase?");
     if (lowerCase == true) {
-      var criteriaArray = criteriaArray.concat(lowerAlphabet);
+  //    var criteriaArray = criteriaArray.concat(lowerAlphabet);
     } 
   var upperCase = confirm("Include uppercase?");
     if (upperCase == true) {
-      var criteriaArray = criteriaArray.concat(upperAlphabet);
+  //    var criteriaArray = criteriaArray.concat(upperAlphabet);
     } 
   var numbers = confirm("Include numbers?");
     if (numbers == true) {
-      var criteriaArray = criteriaArray.concat(numberOptions);
+  //    var criteriaArray = criteriaArray.concat(numberOptions);
     } 
   var symbols = confirm("Include special characters? (RECOMMENDED)");
   if (symbols == true) {
-    var criteriaArray = criteriaArray.concat(specialCharacter);
+  //  var criteriaArray = criteriaArray.concat(specialCharacter);
   } 
 
   //build password character by character with a for loop
