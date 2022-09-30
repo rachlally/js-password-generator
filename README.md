@@ -5,21 +5,22 @@ An application to generate random passwords
 
 I built this project to better understand how JavaScript allows users to interact with the web browser.  To better understand this process, the exercise was to create a function using JavaScript that generates a secure password, based on a series of prompts the user answers. The information gathered generates the password and displays it on the web brower.  It solves the always present problem of needing to create a unique password (when all you can think of is your pet's name with the year you were born).  
 
-I learned the basics of JavaScript including functions, methods, and alerts/prompts/confirms. I better understand the ways varibles can be used in functions and how functions are the building block of .  Methods including for loops, allow for codes sets to be read Alerts/prompts/confirms are basic methods to allows users to interact and contribute information to the web browser.   
+I learned the basics of JavaScript including functions, methods, and alerts/prompts/confirms. I better understand the ways functions can be used.  Methods including for loops, allow for codes sets to be read for a determined amount of time, which allows scanning through large data sets. Alerts/prompts/confirms are  methods to allows users to interact and contribute information to the web browser.  I learned a lot.  The more you know, the less you know.  Work in progress on the password generator.
 
 ## Usage
 
-To generate a random password, the uesr must load the page at: DEPLOYED SITE
+To generate a random password, the uesr must load the page at: https://rachlally.github.io/js-password-generator/ 
 
-User will click the "Generate Password" button on the landing page.  There will then be at least one alert followed by a series of prompts that this user must confirm to accept or cancel to decline.  The prompts allow the user to determine password length, and special characters of the password including: uppercase, lowercase, numbers, and symbols.  The generated password will appear in the box.
+User will click the "Generate Password" button on the landing page.  There will then be at least one alert followed by a series of prompts that the user must confirm to accept or cancel to decline.  The prompts allow the user to determine password length, and special characters of the password including: uppercase, lowercase, numbers, and symbols.  The generated password should appear in the box.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+![alert](./Assets/Alert.jpg)
+![length](./Assets/Desired%20Length%20Prompt.jpg)
+![invalid](./Assets/Invalid%20Entry.jpg)
+![promptLower](./Assets/Prompt.jpg)
+![promptUpper](./Assets/upper.jpg)
+![promptNumber](./Assets/numbers.jpg)
+![promptSymbols](./Assets/symbols.jpg)
 
-![alt text](assets/images/screenshot.png)
-
-## Credits
-
-Include link to concat
 
 ## License
 
