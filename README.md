@@ -24,7 +24,7 @@ User will click the "Generate Password" button on the landing page.  There will 
 
 ## License
 
-TMIT License
+MIT License
 
 Copyright (c) 2022 rachlally
 
