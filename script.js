@@ -7,9 +7,6 @@ var upperAlphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 var numberOptions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacter = ["!", "@", "#", "$", "%", "&", "*"];
 
-//Based on the responses build available pool of characters
-let criteria = "";
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -22,6 +19,9 @@ function writePassword() {
 //Build a random, secure password 
 function generatePassword() {
   alert("Select your password criteria");
+  
+  // locally scope result here
+  var results = [];
 
   //prompt user for length
   //check length is between 8-128 characters by checking for invalid lengths
@@ -35,29 +35,27 @@ function generatePassword() {
   //store responses in single variable
   var lowerCase = confirm("Include lowercase?");
     if (lowerCase == true) {
-      var result = criteria.concat(lowerAlphabet);
+      results.unshift(lowerAlphabet);
     } 
   var upperCase = confirm("Include uppercase?");
     if (upperCase == true) {
-     var result = criteria.concat(upperAlphabet);
+      results.unshift(upperAlphabet);
     } 
   var numbers = confirm("Include numbers?");
     if (numbers == true) {
-      var result = criteria.concat(numberOptions);
+      results.unshift(numberOptions);
     } 
   var symbols = confirm("Include special characters? (RECOMMENDED)");
   if (symbols == true) {
-    var result = criteria.concat(specialCharacter);
+    results.unshift(specialCharacter);
   } 
+console.log(results);
+ 
+for (var i = 0; i < results.length; i++) {
+  if (i == desiredLength);
 
-//build password character by character with a for loop
-//generate random int w/in range of available characters
-//do until length = desiredLength
-    //attempted for loops but best I could do was generate a single random number
-//for (i >= 0; i <= result.length; i++); 
-  //var result = Math.floor((Math.random() * desiredLength + 1));
-  
-  return result;
+return password;
+}
 }
 
 
@@ -65,5 +63,3 @@ function generatePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-//currently, running through function and grabbing full array of most recently selected
-//what needs to happen: all selections added to masterArray, for loop randomly selects until desired length is reached
