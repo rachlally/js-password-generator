@@ -50,14 +50,13 @@ function generatePassword() {
     results.unshift(specialCharacter);
   } 
 console.log(results);
- 
+
 for (var i = 0; i < results.length; i++) {
-  if (i == desiredLength);
+  if (i == desiredLength) 
 
-return password;
-}
-}
+return results;
 
+}}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
