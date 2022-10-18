@@ -22,6 +22,7 @@ function generatePassword() {
   
   // locally scope result here
   var results = [];
+ 
 
   //prompt user for length
   //check length is between 8-128 characters by checking for invalid lengths
@@ -35,28 +36,37 @@ function generatePassword() {
   //store responses in single variable
   var lowerCase = confirm("Include lowercase?");
     if (lowerCase == true) {
-      results.unshift(lowerAlphabet);
+      var results = results.concat(lowerAlphabet);
     } 
   var upperCase = confirm("Include uppercase?");
     if (upperCase == true) {
-      results.unshift(upperAlphabet);
+      var results = results.concat(upperAlphabet);
     } 
   var numbers = confirm("Include numbers?");
     if (numbers == true) {
-      results.unshift(numberOptions);
+      var results = results.concat(numberOptions);
     } 
   var symbols = confirm("Include special characters? (RECOMMENDED)");
   if (symbols == true) {
-    results.unshift(specialCharacter);
+    var results = results.concat(specialCharacter);
   } 
-console.log(results);
 
-for (var i = 0; i < results.length; i++) {
-  if (i == desiredLength) 
+  console.log(results);
 
-return results;
 
-}}
+  var randomPassword = '';
+
+
+  for (var i = 0; i < desiredLength; i++) {
+    var random = Math.floor(Math.random() * results.length);
+    var randomChar = results[random]
+    randomPassword = randomPassword + randomChar
+    console.log(randomPassword);
+  }
+  return randomPassword;
+
+}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
